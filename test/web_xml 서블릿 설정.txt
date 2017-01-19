@@ -1,0 +1,13 @@
+<servlet>
+  	<servlet-name>flowers</servlet-name>
+    <servlet-class>center.controller.CenterServlet</servlet-class>
+    <init-param>
+      <param-name>path</param-name>
+      <param-value>C:\Users\user1\git\Project2\center\WebContent\WEB-INF\properties\center.properties</param-value>
+    </init-param>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>flowers</servlet-name>
+    <url-pattern>*.kiki</url-pattern>
+  </servlet-mapping>

@@ -1,0 +1,103 @@
+create table join(
+    id varchar2(20) primary key,
+    pw varchar2(20),
+    name varchar2(20),
+    birth number,
+    phone number,
+    address varchar2(100),
+    email varchar2(50),
+    bankName varchar2(20),
+    bankAccount number,
+    lev varchar2(15),
+    regDate date default sysdate
+);
+
+create table qna(
+    num number primary key,
+    center varchar2(20),
+    title varchar2(20),
+    content varchar2(4000),
+    writer varchar2(20),
+    pw varchar2(20),
+    regDate date default sysdate,
+    readCount number,
+    ref number,
+    reLevel number,
+    reStep number
+);
+
+create table class(
+    list varchar2(20),
+    center varchar2(20),
+    classCode varchar2(20),
+    className varchar2(20),
+    teacher varchar2(20),
+    classDate number,
+    classTime number,
+    person number,
+    lev varchar2(20)
+);
+
+create table notice(
+    num number primary key,
+    center varchar2(20),
+    title varchar2(20),
+    content varchar2(4000),
+    regDate date default sysdate,
+    readCount number
+);
+
+create table review(
+    num number primary key,
+    center varchar2(20),
+    content varchar2(4000),
+    regDate date default sysdate,
+    readCount number    
+);
+
+create table payment(
+    bankName varchar2(20),
+    bankAcount number,
+    accHolder varchar2(20),
+    pay number,
+    teacher varchar2(20),
+    empNumber varchar2(20) primary key
+);
+
+create table reply(
+    reNum number primary key,
+    boardNum number,
+    writer varchar2(20),
+    content varchar2(4000),
+    regDate date default sysdate,
+    ref number,
+    reLevel number,
+    reStep number
+);
+
+create table photo(
+    num number primary key,
+    center varchar2(20),
+    title varchar2(20),
+    content varchar2(4000),
+    writer varchar2(20),
+    pw varchar2(20),
+    regDate date default sysdate,
+    readCount number
+);
+
+create table manage(
+    checkIn date default sysdate,
+    checkOut date default sysdate,
+    teacher varchar2(20),
+    id varchar2(20),
+    empNumber varchar2(20) primary key
+);
+
+
+
+
+
+
+
+
